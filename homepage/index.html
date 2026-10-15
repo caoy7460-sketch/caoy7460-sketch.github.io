@@ -33,10 +33,15 @@
       
     ],
 
-    // 研究方向：researchIntro 填总述，research 中可填写多条具体方向。
+    // 研究方向：researchIntro 填总述，research 中每条方向必须放在英文双引号内。
+    // 资料区的文字换行请在引号内写 \n，不要写 <br>，也不要删除引号或逗号。
     // 例如：research: ["Your first research topic", "Your second research topic"],
     researchIntro: "I am interested in computational mathematics, with a particular focus on model reduction methods and reduced-order modeling.",
-    research: [My current research interests include (1) design, analysis and implementation of numerical solvers for PDEs, (2) dimensionality reduction through data-driven model order reduction and low-rank solvers based on matrix or tensor compressions],
+    research: [
+      "Designing, analyzing, and implementing numerical PDE solvers.",
+      "Data-driven model order reduction, including low-rank solvers built on matrix and tensor compression.",
+      "Connections between modern dimension reduction techniques and classical numerical solution methods."
+    ],
 
     // 教育经历：将真实资料填入下面的格式，再放入 education 的方括号中。
     // { degree: "Your degree", institution: "Your university", period: "2022–2026", details: "Additional information" }
@@ -113,6 +118,7 @@
     h2 { margin: 34px 0 17px; font-size: 1.5rem; font-weight: 700; line-height: 1.35; letter-spacing: -.3px; }
     h3 { font-size: 1.05rem; line-height: 1.5; margin: 25px 0 8px; }
     p { margin: 0 0 21px; }
+    #home-intro, #about-text p, [data-research] p, [data-research] li, .entry-details, .project p { white-space: pre-line; }
     ul, ol { padding-left: 26px; margin: 0 0 24px; }
     .content-list li { padding-left: 1px; margin-bottom: 16px; }
     .content-list li:last-child { margin-bottom: 0; }
