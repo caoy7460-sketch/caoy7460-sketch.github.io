@@ -1,0 +1,424 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Cao Yuchen's personal homepage: research interests, education, publications, teaching, and code.">
+  <meta name="theme-color" content="#ffffff">
+  <title>Cao Yuchen’s Homepage - Cao Yuchen</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='10' fill='%23494e52'/%3E%3Ctext x='32' y='41' text-anchor='middle' font-family='Arial,sans-serif' font-size='27' fill='white'%3ECY%3C/text%3E%3C/svg%3E">
+
+  <!-- ============================================================
+  个人资料设置：日后主要修改下面这一段即可。
+  只修改英文引号里的内容，保留逗号和括号。空数组 [] 表示暂未填写。
+  photo 可填写照片链接，或与本文件一起上传的照片文件名，如 "photo.jpg"。
+  cvUrl 可填写简历 PDF 链接，或与本文件一起上传的 "cv.pdf"。
+  默认不填写学校、职位、研究方向和邮箱，避免显示未经确认的信息。
+  ============================================================ -->
+  <script>
+  window.homepageProfile = {
+    name: "Cao Yuchen",
+    position: "",
+    affiliation: "",
+    location: "",
+    photo: "",
+    email: "",
+    github: "https://github.com/caoy7460-sketch",
+    scholar: "",
+    cvUrl: "",
+
+    // 首页的开场介绍。about 中每一项是一段文字。
+    intro: "Welcome to my homepage. I am Cao Yuchen.",
+    about: [
+      "This website brings together my projects and contact information."
+    ],
+
+    // 研究方向：researchIntro 填总述，research 中可填写多条具体方向。
+    // 例如：research: ["Your first research topic", "Your second research topic"],
+    researchIntro: "",
+    research: [],
+
+    // 教育经历：将真实资料填入下面的格式，再放入 education 的方括号中。
+    // { degree: "Your degree", institution: "Your university", period: "2022–2026", details: "Additional information" }
+    education: [],
+
+    // 论文列表，每篇论文使用一组大括号，多篇之间加英文逗号。
+    // { title: "Paper title", authors: "Author names", venue: "Journal or conference", year: "2026", url: "https://..." }
+    publications: [],
+
+    // 教学经历。
+    // { title: "Course title", role: "Your role", institution: "University", term: "Fall 2026", url: "" }
+    teaching: [],
+
+    // 个人项目。可在这里添加更多项目。
+    projects: [
+      {
+        title: "Personal Homepage",
+        description: "The source code for this personal website, hosted on GitHub Pages.",
+        stack: "HTML, CSS, JavaScript",
+        url: "https://github.com/caoy7460-sketch/caoy7460-sketch.github.io"
+      }
+    ]
+  };
+  </script>
+
+  <style>
+    :root {
+      --text: #494e52;
+      --muted: #70777d;
+      --link: #298da8;
+      --border: #f0f1f2;
+      --footer: #f2f3f3;
+      --width: 1280px;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+      color: var(--text);
+      background: #fff;
+      font-size: 18px;
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; line-height: 1.6; }
+    a { color: var(--link); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    a:focus-visible { outline: 2px solid var(--link); outline-offset: 4px; }
+    [hidden] { display: none !important; }
+    .skip-link { position: fixed; left: 16px; top: -70px; z-index: 10; padding: 8px 16px; background: var(--text); color: #fff; }
+    .skip-link:focus { top: 12px; }
+    .masthead { border-bottom: 1px solid var(--border); }
+    .masthead-inner { max-width: var(--width); margin: 0 auto; padding: 25px 24px; display: flex; align-items: center; gap: 56px; }
+    .site-name { font-size: 1rem; font-weight: 700; white-space: nowrap; color: #6a7074; }
+    .navigation { display: flex; align-items: center; gap: 36px; margin: 0; padding: 0; list-style: none; }
+    .navigation a { display: block; color: #6a7074; position: relative; padding: 2px 0; font-size: 1rem; }
+    .navigation a:hover { color: #2c3033; text-decoration: none; }
+    .navigation a:after { content: ""; position: absolute; left: 0; right: 0; bottom: -7px; height: 3px; background: #bfc4c7; transform: scaleX(0); transition: transform .15s ease; }
+    .navigation a:hover:after, .navigation a[aria-current="page"]:after { transform: scaleX(1); }
+    .layout { max-width: var(--width); min-height: calc(100vh - 244px); margin: 0 auto; padding: 40px 24px 72px; display: grid; grid-template-columns: 220px minmax(0, 1fr); gap: 58px; align-items: start; }
+    .sidebar { position: sticky; top: 28px; font-size: .78rem; overflow-wrap: anywhere; }
+    .avatar { width: 175px; height: 175px; border-radius: 50%; border: 1px solid #e4e6e7; padding: 5px; display: grid; place-items: center; margin-bottom: 17px; }
+    .avatar img { width: 163px; height: 163px; border-radius: 50%; object-fit: cover; }
+    .avatar-initials { width: 163px; height: 163px; border-radius: 50%; display: grid; place-items: center; background: #eef0f1; color: #858c92; font-size: 2.5rem; font-weight: 500; letter-spacing: -2px; user-select: none; }
+    .author-name { font-size: 1rem; margin: 0 0 6px; line-height: 1.4; font-weight: 700; }
+    .author-position, .author-affiliation { margin: 0 0 5px; font-size: .78rem; line-height: 1.5; }
+    .author-links { list-style: none; padding: 0; margin: 17px 0 0; }
+    .author-links li { margin-bottom: 7px; }
+    .author-links a, .location { display: flex; align-items: flex-start; gap: 9px; color: var(--text); }
+    .icon { width: 15px; height: 15px; flex: 0 0 15px; margin-top: 4px; fill: none; stroke: currentColor; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
+    .page { max-width: 900px; min-width: 0; overflow-wrap: anywhere; }
+    h1 { margin: -5px 0 20px; font-size: 1.56rem; font-weight: 700; line-height: 1.3; letter-spacing: -.4px; }
+    h2 { margin: 34px 0 17px; font-size: 1.5rem; font-weight: 700; line-height: 1.35; letter-spacing: -.3px; }
+    h3 { font-size: 1.05rem; line-height: 1.5; margin: 25px 0 8px; }
+    p { margin: 0 0 21px; }
+    ul, ol { padding-left: 26px; margin: 0 0 24px; }
+    .content-list li { padding-left: 1px; margin-bottom: 16px; }
+    .content-list li:last-child { margin-bottom: 0; }
+    .entry-title { font-weight: 600; }
+    .entry-meta { display: block; color: var(--muted); font-size: .9rem; margin-top: 3px; }
+    .entry-details { display: block; font-size: .95rem; margin-top: 3px; }
+    .placeholder { color: #858b90; font-size: .94rem; font-style: italic; }
+    .contact-list { list-style: disc; }
+    .download { display: inline-flex; align-items: center; gap: 8px; background: #f2f3f3; border: 1px solid #e3e5e6; border-radius: 3px; padding: 8px 13px; color: var(--text); font-size: .85rem; font-weight: 600; margin: 0 0 20px; }
+    .download:hover { background: #e9ebec; text-decoration: none; }
+    .project { margin-bottom: 30px; }
+    .project h2 { margin-bottom: 10px; font-size: 1.15rem; }
+    .project p { margin-bottom: 8px; }
+    .project-stack { color: var(--muted); font-size: .8rem; }
+    .page-footer { background: var(--footer); border-top: 1px solid #e4e6e7; color: #70777b; font-size: .7rem; }
+    .footer-inner { max-width: var(--width); margin: 0 auto; padding: 28px 24px 34px; }
+    .footer-links { display: flex; flex-wrap: wrap; gap: 10px 24px; margin-bottom: 13px; }
+    .page-footer a { color: inherit; }
+    .copyright { margin: 0; font-size: .65rem; }
+    @media (min-width: 1440px) { .layout { grid-template-columns: 240px minmax(0, 1fr); gap: 60px; } }
+    @media (max-width: 1023px) {
+      :root { font-size: 17px; }
+      .layout { grid-template-columns: 190px minmax(0,1fr); gap: 32px; padding-top: 32px; }
+      .avatar { width: 155px; height: 155px; }
+      .avatar img, .avatar-initials { width: 143px; height: 143px; }
+      .masthead-inner { gap: 36px; }
+      .navigation { gap: 27px; }
+    }
+    @media (max-width: 767px) {
+      :root { font-size: 16px; }
+      .masthead-inner { padding: 18px 20px; gap: 15px; flex-wrap: wrap; }
+      .site-name { flex-basis: 100%; font-size: 1.08rem; }
+      .navigation { gap: 26px; }
+      .navigation a { font-size: .94rem; }
+      .layout { display: block; padding: 25px 20px 48px; }
+      .sidebar { position: static; display: grid; grid-template-columns: 88px minmax(0,1fr); gap: 18px; margin-bottom: 32px; font-size: .82rem; }
+      .avatar { margin: 0; width: 88px; height: 88px; padding: 3px; }
+      .avatar img, .avatar-initials { width: 80px; height: 80px; }
+      .avatar-initials { font-size: 1.65rem; letter-spacing: -1px; }
+      .author-name { font-size: 1.1rem; margin-top: 1px; }
+      .author-position, .author-affiliation { font-size: .82rem; }
+      .author-links { margin: 9px 0 0; display: flex; flex-wrap: wrap; gap: 3px 17px; }
+      .author-links li { margin: 0; }
+      .author-links .location { width: 100%; }
+      .icon { margin-top: 3px; width: 14px; height: 14px; flex-basis: 14px; }
+      h1 { font-size: 1.55rem; margin-top: 0; margin-bottom: 20px; }
+      h2 { font-size: 1.4rem; margin-top: 28px; }
+      p { margin-bottom: 18px; }
+      .footer-inner { padding: 24px 20px 28px; }
+    }
+    @media (max-width: 359px) {
+      .navigation { gap: 19px; }
+      .navigation a { font-size: .86rem; }
+      .masthead-inner, .layout, .footer-inner { padding-left: 16px; padding-right: 16px; }
+    }
+    @media (prefers-reduced-motion: reduce) { *, *:before, *:after { transition: none !important; } }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="masthead">
+    <div class="masthead-inner">
+      <a class="site-name" href="#home" data-person-name>Cao Yuchen</a>
+      <nav aria-label="Main navigation">
+        <ul class="navigation">
+          <li><a id="cv-nav" href="#cv">CV</a></li>
+          <li><a href="#publications">Publications</a></li>
+          <li><a href="#teaching">Teaching</a></li>
+          <li><a href="#code">Code</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="layout">
+    <aside class="sidebar" aria-label="Personal information">
+      <div class="avatar">
+        <span class="avatar-initials" id="avatar-initials" aria-hidden="true">CY</span>
+        <img id="profile-photo" alt="Cao Yuchen" hidden>
+      </div>
+      <div class="author-info">
+        <h2 class="author-name" data-person-name>Cao Yuchen</h2>
+        <p class="author-position" id="author-position" hidden></p>
+        <p class="author-affiliation" id="author-affiliation" hidden></p>
+        <ul class="author-links">
+          <li id="location-item" hidden><span class="location"><svg class="icon" viewBox="0 0 20 20" aria-hidden="true"><path d="M16 8c0 5-6 10-6 10S4 13 4 8a6 6 0 1 1 12 0Z"/><circle cx="10" cy="8" r="2"/></svg><span id="author-location"></span></span></li>
+          <li id="email-item" hidden><a id="sidebar-email"><svg class="icon" viewBox="0 0 20 20" aria-hidden="true"><rect x="2" y="4" width="16" height="12" rx="1"/><path d="m2 5 8 6 8-6"/></svg>Email</a></li>
+          <li><a class="github-link" href="https://github.com/caoy7460-sketch" target="_blank" rel="noopener noreferrer"><svg class="icon" viewBox="0 0 20 20" aria-hidden="true"><path d="m6 5-3-2v5a7 7 0 0 0 14 0V3l-3 2a10 10 0 0 0-8 0ZM7 15v3m6-3v3M3 13c-3 0-2-3-3-3"/></svg>GitHub</a></li>
+          <li id="scholar-item" hidden><a id="scholar-link" target="_blank" rel="noopener noreferrer"><svg class="icon" viewBox="0 0 20 20" aria-hidden="true"><path d="m1 7 9-5 9 5-9 5-9-5Zm4 3v5c3 3 7 3 10 0v-5m4-3v8"/></svg>Google Scholar</a></li>
+        </ul>
+      </div>
+    </aside>
+
+    <div class="page">
+      <article class="page-view" id="home" aria-labelledby="home-title">
+        <h1 id="home-title">Cao Yuchen’s Homepage</h1>
+        <p id="home-intro">Welcome to my homepage. I am Cao Yuchen.</p>
+        <div id="about-text"><p>This website brings together my projects and contact information.</p></div>
+        <section aria-labelledby="research-title">
+          <h2 id="research-title">Research Interest</h2>
+          <div data-research><p class="placeholder">Research interests will be added here.</p></div>
+        </section>
+        <section aria-labelledby="education-title">
+          <h2 id="education-title">Education</h2>
+          <div data-education><p class="placeholder">Education information will be added here.</p></div>
+        </section>
+        <section aria-labelledby="contact-title">
+          <h2 id="contact-title">Contact Information</h2>
+          <ul class="contact-list">
+            <li id="contact-email-item" hidden>Email: <a id="contact-email"></a></li>
+            <li>GitHub: <a class="github-link" id="contact-github" href="https://github.com/caoy7460-sketch" target="_blank" rel="noopener noreferrer">caoy7460-sketch</a></li>
+          </ul>
+        </section>
+      </article>
+
+      <article class="page-view" id="cv" aria-labelledby="cv-title" hidden>
+        <h1 id="cv-title">Curriculum Vitae</h1>
+        <p id="cv-note" class="placeholder">A downloadable CV will be added here.</p>
+        <a class="download" id="cv-download" target="_blank" rel="noopener noreferrer" hidden>View CV (PDF) <span aria-hidden="true">↗</span></a>
+        <h2>Education</h2>
+        <div data-education><p class="placeholder">Education information will be added here.</p></div>
+        <h2>Research Interest</h2>
+        <div data-research><p class="placeholder">Research interests will be added here.</p></div>
+      </article>
+
+      <article class="page-view" id="publications" aria-labelledby="publications-title" hidden>
+        <h1 id="publications-title">Publications</h1>
+        <div id="publication-list"><p class="placeholder">Publications will be listed here.</p></div>
+      </article>
+
+      <article class="page-view" id="teaching" aria-labelledby="teaching-title" hidden>
+        <h1 id="teaching-title">Teaching</h1>
+        <div id="teaching-list"><p class="placeholder">Teaching information will be added here.</p></div>
+      </article>
+
+      <article class="page-view" id="code" aria-labelledby="code-title" hidden>
+        <h1 id="code-title">Code</h1>
+        <div id="project-list">
+          <section class="project"><h2><a href="https://github.com/caoy7460-sketch/caoy7460-sketch.github.io" target="_blank" rel="noopener noreferrer">Personal Homepage</a></h2><p>The source code for this personal website, hosted on GitHub Pages.</p><p class="project-stack">HTML, CSS, JavaScript</p></section>
+        </div>
+      </article>
+    </div>
+  </main>
+
+  <footer class="page-footer">
+    <div class="footer-inner">
+      <nav class="footer-links" aria-label="Footer navigation"><a href="#home">Home</a><a href="#cv">CV</a><a href="#publications">Publications</a><a href="#teaching">Teaching</a><a href="#code">Code</a><a class="github-link" href="https://github.com/caoy7460-sketch" target="_blank" rel="noopener noreferrer">GitHub</a></nav>
+      <p class="copyright">© <span id="year">2026</span> <span data-person-name>Cao Yuchen</span>.</p>
+    </div>
+  </footer>
+  <noscript><style>.page-view[hidden] { display: block !important; margin-top: 45px; }</style></noscript>
+
+  <script>
+  (() => {
+    "use strict";
+    const profile = window.homepageProfile || {};
+    const byId = id => document.getElementById(id);
+    const text = value => typeof value === "string" ? value : "";
+    const node = (tag, value, className) => {
+      const element = document.createElement(tag);
+      if (value) element.textContent = text(value);
+      if (className) element.className = className;
+      return element;
+    };
+    const items = value => Array.isArray(value) ? value.filter(item => item && typeof item === "object") : [];
+    const url = value => {
+      if (typeof value !== "string" || !value.trim()) return "";
+      try {
+        const result = new URL(value, document.baseURI);
+        return ["https:", "http:"].includes(result.protocol) || (result.protocol === "file:" && location.protocol === "file:") ? result.href : "";
+      } catch { return ""; }
+    };
+    const link = (label, href) => {
+      const safe = url(href);
+      if (!safe) return node("span", label);
+      const anchor = node("a", label);
+      anchor.href = safe;
+      anchor.target = "_blank";
+      anchor.rel = "noopener noreferrer";
+      return anchor;
+    };
+    const optionalText = (id, value) => {
+      byId(id).textContent = text(value);
+      byId(id).hidden = !text(value).trim();
+    };
+
+    const name = text(profile.name).trim() || "Cao Yuchen";
+    document.querySelectorAll("[data-person-name]").forEach(element => { element.textContent = name; });
+    byId("home-title").textContent = `${name}’s Homepage`;
+    byId("year").textContent = String(new Date().getFullYear());
+    document.querySelector('meta[name="description"]').content = `${name}'s personal homepage: research interests, education, publications, teaching, and code.`;
+    byId("avatar-initials").textContent = name.split(/\s+/).map(part => part[0]).slice(0,2).join("").toUpperCase();
+    optionalText("author-position", profile.position);
+    optionalText("author-affiliation", profile.affiliation);
+    if (text(profile.location).trim()) { byId("author-location").textContent = profile.location; byId("location-item").hidden = false; }
+    const photo = url(profile.photo);
+    if (photo) {
+      const image = byId("profile-photo");
+      image.alt = name;
+      image.addEventListener("load", () => { image.hidden = false; byId("avatar-initials").hidden = true; });
+      image.addEventListener("error", () => { image.hidden = true; byId("avatar-initials").hidden = false; });
+      image.src = photo;
+    }
+    const github = url(profile.github);
+    if (github) {
+      document.querySelectorAll(".github-link").forEach(anchor => { anchor.href = github; });
+      byId("contact-github").textContent = new URL(github).pathname.replace(/^\/+|\/+$/g, "") || github;
+    }
+    if (/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(text(profile.email))) {
+      const email = text(profile.email);
+      const href = `mailto:${encodeURIComponent(email).replace(/%40/g,"@")}`;
+      byId("sidebar-email").href = href;
+      byId("contact-email").href = href;
+      byId("contact-email").textContent = email;
+      byId("email-item").hidden = false;
+      byId("contact-email-item").hidden = false;
+    }
+    if (url(profile.scholar)) { byId("scholar-link").href = url(profile.scholar); byId("scholar-item").hidden = false; }
+    const cv = url(profile.cvUrl);
+    if (cv) {
+      byId("cv-download").href = cv;
+      byId("cv-download").hidden = false;
+      byId("cv-note").hidden = true;
+      byId("cv-nav").href = cv;
+      byId("cv-nav").target = "_blank";
+      byId("cv-nav").rel = "noopener noreferrer";
+    }
+    optionalText("home-intro", profile.intro);
+    if (Array.isArray(profile.about)) byId("about-text").replaceChildren(...profile.about.filter(paragraph => typeof paragraph === "string" && paragraph.trim()).map(paragraph => node("p", paragraph)));
+
+    const research = Array.isArray(profile.research) ? profile.research.filter(item => typeof item === "string" && item.trim()) : [];
+    if (text(profile.researchIntro).trim() || research.length) {
+      document.querySelectorAll("[data-research]").forEach(container => {
+        container.replaceChildren();
+        if (text(profile.researchIntro).trim()) container.append(node("p", profile.researchIntro));
+        if (research.length) {
+          const list = node("ul", "", "content-list");
+          list.append(...research.map(topic => node("li", topic)));
+          container.append(list);
+        }
+      });
+    }
+    const education = items(profile.education);
+    if (education.length) {
+      document.querySelectorAll("[data-education]").forEach(container => {
+        const list = node("ul", "", "content-list");
+        for (const entry of education) {
+          const item = node("li");
+          item.append(node("span", text(entry.degree), "entry-title"));
+          if (text(entry.institution)) item.append(document.createTextNode(`, ${entry.institution}`));
+          if (text(entry.period)) item.append(node("span", entry.period, "entry-meta"));
+          if (text(entry.details)) item.append(node("span", entry.details, "entry-details"));
+          list.append(item);
+        }
+        container.replaceChildren(list);
+      });
+    }
+    const publications = items(profile.publications);
+    if (publications.length) {
+      const list = node("ol", "", "content-list");
+      for (const entry of publications) {
+        const item = node("li");
+        item.append(link(text(entry.title), entry.url));
+        if (text(entry.authors)) item.append(node("span", entry.authors, "entry-details"));
+        const venue = [text(entry.venue), text(entry.year)].filter(Boolean).join(", ");
+        if (venue) item.append(node("em", venue, "entry-meta"));
+        list.append(item);
+      }
+      byId("publication-list").replaceChildren(list);
+    }
+    const teaching = items(profile.teaching);
+    if (teaching.length) {
+      const list = node("ul", "", "content-list");
+      for (const entry of teaching) {
+        const item = node("li");
+        item.append(link(text(entry.title), entry.url));
+        const details = [text(entry.role), text(entry.institution), text(entry.term)].filter(Boolean).join(" · ");
+        if (details) item.append(node("span", details, "entry-meta"));
+        list.append(item);
+      }
+      byId("teaching-list").replaceChildren(list);
+    }
+    if (Array.isArray(profile.projects)) {
+      const projects = items(profile.projects);
+      const sections = projects.map(entry => {
+        const section = node("section", "", "project");
+        const heading = node("h2");
+        heading.append(link(text(entry.title), entry.url));
+        section.append(heading);
+        if (text(entry.description)) section.append(node("p", entry.description));
+        if (text(entry.stack)) section.append(node("p", entry.stack, "project-stack"));
+        return section;
+      });
+      byId("project-list").replaceChildren(...(sections.length ? sections : [node("p", "Projects will be added here.", "placeholder")]));
+    }
+
+    const titles = {home: `${name}’s Homepage`, cv: "Curriculum Vitae", publications: "Publications", teaching: "Teaching", code: "Code"};
+    function showPage(scroll) {
+      const hash = location.hash.slice(1);
+      if (hash === "main") return;
+      const selected = Object.hasOwn(titles, hash) ? hash : "home";
+      document.querySelectorAll(".page-view").forEach(view => { view.hidden = view.id !== selected; });
+      document.querySelectorAll('.masthead a[href^="#"], .footer-links a[href^="#"]').forEach(anchor => {
+        if (anchor.getAttribute("href") === `#${selected}`) anchor.setAttribute("aria-current", "page");
+        else anchor.removeAttribute("aria-current");
+      });
+      document.title = `${titles[selected]} - ${name}`;
+      if (scroll && hash !== "main") window.scrollTo(0,0);
+    }
+    window.addEventListener("hashchange", () => showPage(true));
+    showPage(false);
+  })();
+  </script>
+</body>
+</html>
